@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zzc.mapper.Mapper"> 
+<select id="indexSelect" resultType="News">
+
+select * from map limit #{pageNumber},#{pageSize}
+
+</select>
+
+<select id="indexSum" resultType="cn.zzc.beans.News" >
+select count(*) from map;
+</select>
+
+<select id="indexDelect" resultType="cn.zzc.beans.News">
+delete from map where id=#{id}
+
+
+
+</select>
+</mapper>
